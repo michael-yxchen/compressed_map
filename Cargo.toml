@@ -7,11 +7,18 @@ description = "'Static functions': compressed maps with the keys removed"
 readme = "README.md"
 repository = "https://github.com/bitwiseshiftleft/compressed_map"
 categories = ["data-structures", "compression"]
-include = ["/src", "/benches", "LICENSE.txt", "TODO.md", "README.md", "build.rs"]
+include = [
+    "/src",
+    "/benches",
+    "LICENSE.txt",
+    "TODO.md",
+    "README.md",
+    "build.rs",
+]
 build = "build.rs" # for cbindgen
 
 [lib]
-crate-type = ["cdylib","lib"]
+crate-type = ["cdylib", "lib"]
 bench = false
 
 [badges]
@@ -20,13 +27,13 @@ maintenance = { status = "experimental" }
 [features]
 default = ["cffi"]
 threading = []
-cffi      = []
-headers   = []
+cffi = []
+headers = []
 
 [dependencies]
 # TODO: pin hashes
 siphasher = "0.3.10"
-bincode = "2.0.0-RC.1"
+bincode = "=2.0.0-rc.1"
 rand = "0.8.5"
 
 [dev-dependencies]
